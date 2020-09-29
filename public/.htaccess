@@ -1,4 +1,6 @@
 Options -MultiViews
     RewriteEngine On
     RewriteCond %{login} !-f
-    RewriteRule ^ index.html [QSA,L]
+    RewriteRule ^/user(.*)$    /index.html [L]
+    RewriteRule ^/home(.*)$    /index.html [L]
+    RewriteRule ^/contact(.*)$ /index.html [L]
