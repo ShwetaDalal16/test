@@ -7,21 +7,7 @@ import Signup from "./signup";
 import Competition from './competition'
 
 class MainComponent extends Component {
-  constructor(props) {
-    super(props);
-    this.previousLocation = this.props.location;
-  }
-
-  componentDidUpdate() {
-    let { location } = this.props;
-
-    if (!(location.state && location.state.modal)) {
-      this.previousLocation = location;
-    }
-  }
-
   render() {
-    const { location } = this.props;
     return (
       <React.Fragment>
         <Header />
